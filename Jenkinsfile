@@ -5,11 +5,6 @@ pipeline {
             steps {
                 echo 'Hello world!' 
             }
-        stage('Stage2') {
-            steps {
-                echo 'this is second step'
-            }
-        }
         }
     }
 }
