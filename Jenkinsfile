@@ -7,6 +7,7 @@ pipeline {
                     echo "Madhya Pradesh"
                 }
         }
+    }
         stage('test'){
             steps {
                 if ( state == "MP") {
@@ -14,4 +15,6 @@ pipeline {
                 }
         }
     }
+}
+
 }
