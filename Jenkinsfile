@@ -3,18 +3,13 @@ pipeline {
     stages {
         stage('Dev') {
             steps {
-                if ( state == "MP") {
-                    echo "Madhya Pradesh"
-                }
+                echo "You Select ${state}"
+            }
         }
-    }
         stage('test'){
             steps {
-                if ( state == "MP") {
-                    echo "Madhya Pradesh"
-                }
+                echo "This is test stage"
+            }
         }
-    }
-}
-
+            }
 }
