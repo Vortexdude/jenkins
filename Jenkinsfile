@@ -8,19 +8,19 @@ pipeline {
         }
         stage('test'){
             steps {
-               echo "This is test stage"
+               echo "your Sum is ${value1} + ${value2}"
             }
         }
         stage('UAT'){
             when { expression { return env.BRANCH_NAME == 'jenkings' } }
             steps {
-                echo "it runs when the branch name is jenkings"
+                echo "it runs when the branch name is jenkings  "
             }
         }
         stage('deploy'){
             when { expression { return Deploy == 'true' } }
             steps {
-                echo "You run with the runner with branch env.BRANCH_NAME"
+                echo "You Deploy with the ${env.BRANCH_NAME}"
             }
 
         }
