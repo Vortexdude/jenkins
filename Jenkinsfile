@@ -8,7 +8,10 @@ pipeline {
         }
         stage('test'){
             steps {
-                echo "you Run with ${Runner}"
+                if ${Runner}{
+                    echo "You Run with Runner"
+                }else
+                echo 'You simply run'
             }
         }
             }
