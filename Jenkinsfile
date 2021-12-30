@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Stage 2'){
             steps {
-                echo "This is stage 2"
+                sh cd src && bash new.sh
             }
         }
     }
