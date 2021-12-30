@@ -12,7 +12,7 @@ pipeline {
             }
         }
         stage('deploy'){
-            when { expression { return ${Runner} == 'true' } }
+            when { expression { return Runner == 'true' } }
             steps {
                 echo "You run with the runner with branch ${env.BRANCH_NAME}"
             }
