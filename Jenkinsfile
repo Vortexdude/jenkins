@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Stage 2'){
             steps {
-                sh cd src && bash new.sh
+                echo "maza hi aagya"
             }
         }
     }

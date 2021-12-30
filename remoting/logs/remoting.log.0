@@ -1,0 +1,14 @@
+Dec 29, 2021 4:18:49 PM hudson.remoting.jnlp.GuiListener$1 run
+SEVERE: Handshake response not received.
+io.jenkins.remoting.shaded.javax.websocket.DeploymentException: Handshake response not received.
+	at io.jenkins.remoting.shaded.org.glassfish.tyrus.client.ClientManager$3$1.run(ClientManager.java:678)
+	at io.jenkins.remoting.shaded.org.glassfish.tyrus.client.ClientManager$3.run(ClientManager.java:696)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at io.jenkins.remoting.shaded.org.glassfish.tyrus.client.ClientManager$SameThreadExecutorService.execute(ClientManager.java:849)
+	at java.util.concurrent.AbstractExecutorService.submit(Unknown Source)
+	at io.jenkins.remoting.shaded.org.glassfish.tyrus.client.ClientManager.connectToServer(ClientManager.java:493)
+	at io.jenkins.remoting.shaded.org.glassfish.tyrus.client.ClientManager.connectToServer(ClientManager.java:337)
+	at hudson.remoting.Engine.runWebSocket(Engine.java:657)
+	at hudson.remoting.Engine.run(Engine.java:496)
+
