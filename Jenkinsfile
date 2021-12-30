@@ -8,7 +8,7 @@ pipeline {
         }
         stage('test'){
             steps {
-                echo "This is test stage"
+                echo "you Run with ${Runner}"
             }
         }
             }
