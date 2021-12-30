@@ -8,14 +8,15 @@ pipeline {
         }
         stage('test'){
             steps {
-                script {
-                    if ${Runner}{
-                    echo "You Run with Runner"
-                    }else{
-                    echo 'You simply run'    
-                    }
-                }
+               echo "This is test stage"
             }
+        }
+        stage('deploy'){
+            when { expression { return ${Runner} == 'true' } }
+            steps {
+                echo "You run with the runner with branch ${env.BRANCH_NAME}"
+            }
+
         }
     }
 }
