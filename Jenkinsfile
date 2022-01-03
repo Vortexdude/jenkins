@@ -6,11 +6,6 @@ pipeline {
                 echo "You Select ${state}"
             }
         }
-        stage('test'){
-            steps {
-               echo "your Sum is  (($value1+$value2)) " 
-            }
-        }
         stage('UAT'){
             when { expression { return env.BRANCH_NAME == 'jenkings' } }
             steps {
