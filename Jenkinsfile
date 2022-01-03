@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Dev') {
             steps {
-                echo "You Select ${state}"
+                echo "Good to go"
             }
         }
     }
