@@ -7,9 +7,9 @@ pipeline {
             }
         }
         stage('UAT'){
-            when { expression { return env.BRANCH_NAME == 'jenkings' } }
+            // when { expression { return env.BRANCH_NAME == 'jenkings' } }
             steps {
-                echo "it runs when the branch name is jenkings  "
+                echo "it runs whne the code the pushed to the github "
             }
         }
     }
