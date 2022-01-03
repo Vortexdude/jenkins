@@ -8,8 +8,7 @@ pipeline {
         }
         stage('test'){
             steps {
-                sh sum=$((value1+value2))
-               echo "your Sum is " ${sum}
+               echo "your Sum is  $((value1+value2)) " 
             }
         }
         stage('UAT'){
