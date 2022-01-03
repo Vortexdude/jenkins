@@ -6,15 +6,16 @@ pipeline {
                 echo "You Select ${state}"
             }
         }
-        stage('test'){
+        stage('UAT'){
+            when { expression { return env.BRANCH_NAME == 'jenkings' } }
             steps {
-               echo "This is test stage"
+                echo "it runs when the branch name is jenkings  "
             }
         }
         stage('deploy'){
-            when { expression { return Runner == 'true' } }
+            when { expression { return Deploy == 'true' } }
             steps {
-                echo "You run with the runner with branch ${env.BRANCH_NAME}"
+                echo "You Deploy with the ${env.BRANCH_NAME}"
             }
 
         }
